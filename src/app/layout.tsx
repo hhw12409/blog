@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
 
@@ -15,7 +16,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={sans.className}>
-      <body>{children}</body>
+      <body>
+        <header className="flex justify-between p-5">
+          <h1 className="text-2xl font-bold">Hyeonwoo-Blog</h1>
+          <ul className="flex gap-5">
+            <Link href="/">home</Link>
+            <Link href="/about">about</Link>
+            <Link href="/posts">posts</Link>
+            <Link href="/contact">contact</Link>
+          </ul>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
