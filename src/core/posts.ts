@@ -9,3 +9,8 @@ export async function getAllPosts(): Promise<IPost[]> {
     .then<IPost[]>(JSON.parse)
     .then((posts) => posts.sort((a, b) => (a.date > b.date ? -1 : 1)));
 }
+
+export async function getFeaturedPosts(): Promise<IPost[]> {
+  return getAllPosts() //
+    .then((posts) => posts.filter((post) => post.featured));
+}
