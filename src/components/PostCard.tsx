@@ -10,7 +10,7 @@ export default function PostCard({
   return (
     <Link href={`/posts/${path}`}>
       <Image
-        src={`/images/posts/${path}`}
+        src={`/images/posts/${path}.png`}
         alt={title}
         width={300}
         height={200}
