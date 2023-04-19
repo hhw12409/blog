@@ -5,6 +5,7 @@ import { getAllPosts } from "@/core/posts";
 
 export default async function HomePage() {
   const posts = await getAllPosts();
+
   return (
     <>
       <Hero />
