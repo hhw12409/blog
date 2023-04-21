@@ -7,3 +7,7 @@ export interface IPost {
   path: string;
   featured: boolean;
 }
+
+export interface IPostData extends IPost {
+  content: string;
+}
