@@ -10,4 +10,6 @@ export interface IPost {
 
 export interface IPostData extends IPost {
   content: string;
+  next: IPost | null;
+  prev: IPost | null;
 }
