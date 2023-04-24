@@ -3,13 +3,15 @@ import { IForm } from "@/types/form";
 import { useState } from "react";
 import Banner, { BannerData } from "./Banner";
 import SnackBar from "./@shared/SnackBar";
+import { sendContactEmail } from "@/core/contact";
 
 export default function ContactForm() {
-  const [form, setForm] = useState<IForm>({
+  const DEFAULT_DATA = {
     from: "",
     subject: "",
     message: "",
-  });
+  };
+  const [form, setForm] = useState<IForm>(DEFAULT_DATA);
   const [banner, setBanner] = useState<BannerData | null>(null);
   const [snackText, setSnackText] = useState("");
   const handleInputValueChange = (
@@ -22,16 +24,29 @@ export default function ContactForm() {
     }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSnackText("성공했습니다!");
-    setBanner({
-      message: "success!!",
-      state: "success",
-    });
-    setTimeout(() => {
-      setBanner(null);
-    }, 3000);
+    sendContactEmail(form)
+      .then(() => {
+        setSnackText("성공했습니다.");
+        setBanner({
+          message: "메일을 성공적으로 보냈습니다.",
+          state: "success",
+        });
+        setForm(DEFAULT_DATA);
+      })
+      .catch(() => {
+        setSnackText("실패했습니다.");
+        setBanner({
+          message: "메일전송에 실패했습니다. 다시 시도해 주세요.",
+          state: "error",
+        });
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setBanner(null);
+        }, 3000);
+      });
   };
 
   return (
