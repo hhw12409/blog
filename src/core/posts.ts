@@ -1,5 +1,5 @@
 import path from "path";
-import { promises as fs, readFile } from "fs";
+import { promises as fs } from "fs";
 import type { IPost, IPostData } from "@/types/post";
 
 export async function getAllPosts(): Promise<IPost[]> {

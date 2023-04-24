@@ -1,0 +1,48 @@
+#toast_popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(57, 72, 101, 0.8);
+  width: calc(100% - 24px);
+  max-width: max-content;
+  padding: 20px 60px;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  animation: toastPop 2s;
+  z-index: 9999;
+}
+
+@keyframes toastPop {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+  75% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 400px) {
+  #toast_popup {
+    width: 70%;
+  }
+}
+
+@media (max-width: 360px) {
+  #toast_popup {
+    width: 78%;
+  }
+}

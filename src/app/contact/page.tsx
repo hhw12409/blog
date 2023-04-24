@@ -1,5 +1,6 @@
 import ContactForm from "@/components/ContactForm";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { SiNotion } from "react-icons/si";
 
 export default function ContactPage() {
   const LINKS = [
@@ -10,6 +11,10 @@ export default function ContactPage() {
     {
       icon: <AiFillLinkedin />,
       url: "https://www.linkedin.com/in/%ED%98%84%EC%9A%B0-%ED%99%A9-08445523a/",
+    },
+    {
+      icon: <SiNotion />,
+      url: "https://ablaze-sparrow-04b.notion.site/7032b304ddca4695abcaaa5cd76af907",
     },
   ];
 
