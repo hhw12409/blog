@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export async function sendEmail({ subject, from, message }: EmailData) {
+export async function sendEmail({ from, subject, message }: EmailData) {
   const mailData = {
     from,
     to: process.env.AUTH_USER,
