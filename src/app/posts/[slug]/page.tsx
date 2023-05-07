@@ -1,6 +1,6 @@
 import AdjacentPostCard from "@/components/AdjacentPostCard";
 import PostContent from "@/components/PostContent";
-import { getAllPosts, getFeaturedPosts, getPostData } from "@/core/posts";
+import { getAllPosts, getPostData } from "@/core/posts";
 import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
