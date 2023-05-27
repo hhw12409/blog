@@ -1,17 +1,16 @@
 "use client";
+import searchState from "@/atoms/searchStats";
 import Link from "next/link";
-import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { useRecoilState } from "recoil";
 
 export default function Header() {
   const LINK_CLASS = "transition-all hover:text-xl";
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useRecoilState(searchState);
 
   const handleInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.currentTarget.value);
   };
-
-  console.log(inputValue);
 
   return (
     <header className="flex items-center justify-between p-4">
