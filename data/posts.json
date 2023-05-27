@@ -79,5 +79,14 @@
     "category": "my story",
     "path": "review-2023",
     "featured": true
+  },
+  {
+    "id": 9,
+    "title": "클린코드",
+    "description": "클린코드-ooo",
+    "date": "2023-05-08",
+    "category": "clean code",
+    "path": "clean-code",
+    "featured": true
   }
 ]
