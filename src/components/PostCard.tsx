@@ -1,4 +1,4 @@
-import type { IPost } from "@/types/post";
+import type { IPost } from "@/model/post";
 import Image from "next/image";
 import Link from "next/link";
 

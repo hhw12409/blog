@@ -1,4 +1,4 @@
-import type { IPost } from "@/types/post";
+import type { IPost } from "@/model/post";
 import PostCard from "./PostCard";
 
 type Props = { posts: IPost[] };

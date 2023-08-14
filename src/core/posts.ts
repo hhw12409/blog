@@ -1,6 +1,6 @@
 import path from "path";
 import { promises as fs } from "fs";
-import type { IPost, IPostData } from "@/types/post";
+import type { IPost, IPostData } from "@/model/post";
 import { cache } from "react";
 
 export const getAllPosts = cache(async () => {

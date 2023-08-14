@@ -1,4 +1,4 @@
-import { EmailData } from "@/types/email";
+import { EmailData } from "@/model/email";
 import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({

@@ -1,5 +1,5 @@
 import MarkdownViewer from "@/components/MarkdownViewer";
-import { IPostData } from "@/types/post";
+import { IPostData } from "@/model/post";
 import { AiTwotoneCalendar } from "react-icons/ai";
 
 type Props = {

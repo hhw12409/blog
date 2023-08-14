@@ -1,6 +1,6 @@
 "use client";
 
-import type { IPost } from "@/types/post";
+import type { IPost } from "@/model/post";
 import React, { useState } from "react";
 import PostsGrid from "./PostsGrid";
 import Categories from "./Categories";

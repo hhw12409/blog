@@ -1,5 +1,5 @@
 "use client";
-import { IForm } from "@/types/form";
+import { IForm } from "@/model/form";
 import { useState } from "react";
 import Banner, { BannerData } from "./Banner";
 import SnackBar from "./@shared/SnackBar";

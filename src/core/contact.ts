@@ -1,4 +1,4 @@
-import { EmailData } from "@/types/email";
+import { EmailData } from "@/model/email";
 
 export async function sendContactEmail(email: EmailData) {
   const response = await fetch("/api/contact", {

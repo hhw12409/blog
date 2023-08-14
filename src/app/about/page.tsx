@@ -20,7 +20,7 @@ export default function AboutPage() {
         </p>
         <h2 className={TITLE_CLASS}>Career</h2>
         <p>
-          미스터멘션(스타트업) (-Now)
+          미스터멘션(스타트업) (2023.01.02. ~ ING)
           <br />
           컴투스 (2021.04.15. ~ 2023.01.01.)
           <br />

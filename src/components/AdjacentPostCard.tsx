@@ -1,4 +1,4 @@
-import { IPost } from "@/types/post";
+import { IPost } from "@/model/post";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
