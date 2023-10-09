@@ -1,8 +1,6 @@
 "use client";
-import searchState from "@/atoms/searchStats";
+
 import Link from "next/link";
-import { AiOutlineSearch } from "react-icons/ai";
-import { useRecoilState } from "recoil";
 
 export default function Header() {
   const LINK_CLASS = "transition-all hover:text-xl";

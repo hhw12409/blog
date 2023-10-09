@@ -3,7 +3,6 @@ import { Open_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./layout.module.css";
-import RecoilContainer from "@/components/RecoilContainer";
 
 const sans = Open_Sans({ subsets: ["latin"] });
 
@@ -28,11 +27,9 @@ export default function RootLayout({
       <body
         className={`flex flex-col w-full mx-auto max-w-screen-2xl ${styles.body}`}
       >
-        <RecoilContainer>
-          <Header />
-          <main className="grow">{children}</main>
-          <Footer />
-        </RecoilContainer>
+        <Header />
+        <main className="grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );

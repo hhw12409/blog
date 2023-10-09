@@ -1,4 +1,5 @@
 "use client";
+
 import { IForm } from "@/model/form";
 import { useState } from "react";
 import Banner, { BannerData } from "./Banner";
